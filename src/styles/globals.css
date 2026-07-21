@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/*
+ * Tailwind v4 has no tailwind.config.ts — theme tokens are declared here,
+ * inside @theme, and Tailwind auto-generates utilities from them:
+ *   --color-ink   → bg-ink, text-ink, border-ink, bg-ink/80, etc.
+ *   --font-body   → font-body
+ *   --text-body   → text-body (paired with --text-body--line-height)
+ *   --radius-md   → rounded-md
+ * This file replaces the old tailwind.config.ts entirely — delete that file.
+ */
+@theme {
+  /* Colors (PRD §5.2) */
+  --color-ink: #101823;
+  --color-concrete: #eeebe4;
+  --color-concrete-100: #f7f5f1;
+  --color-steel: #5b6670;
+  --color-steel-200: #b9c0c6;
+  --color-signal-amber: #e8a33d;
+  --color-rebar-rust: #8c4a2f;
+  --color-safety-green: #3f7d58;
+  --color-danger: #b3402a;
+
+  /* Typography (PRD §5.3) */
+  --font-display: 'IBM Plex Sans Condensed', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --text-display-xl: 56px;
+  --text-display-xl--line-height: 60px;
+  --text-display-lg: 40px;
+  --text-display-lg--line-height: 44px;
+  --text-display-md: 28px;
+  --text-display-md--line-height: 34px;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body: 16px;
+  --text-body--line-height: 26px;
+  --text-caption: 13px;
+  --text-caption--line-height: 18px;
+
+  /* Radius (PRD §5.4) — small and consistent; rounded-full stays a Tailwind
+     default, reserved for badges/avatars per the PRD */
+  --radius-md: 6px;
+}
+
+@layer base {
+  body {
+    @apply bg-concrete font-body text-ink antialiased;
+  }
+
+  /* Accessibility floor (PRD §5.6) — visible focus ring on every
+     interactive element, not just the ones we remember to class manually. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-signal-amber;
+  }
+}
+
+/* Respect prefers-reduced-motion globally (PRD §5.5) */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
