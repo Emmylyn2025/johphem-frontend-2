@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet-async';
-import { AboutHero } from '../components/Abouthero';
-import { HistorySection } from '../components/Historysection';
-import { MissionVision } from '../components/Missionvision';
-import { ValuesSection } from '../components/Valuesection';
-import { LeadershipPreview } from '../components/Leadershippreview';
-import { SafetyCultureBand } from '../components/Safetyculturebrand';
+import { AboutHero } from '../components/About/Abouthero';
+import { HistorySection } from '../components/About/Historysection';
+import { MissionVision } from '../components/About/Missionvision';
+import { ValuesSection } from '../components/About/Valuesection';
+import { LeadershipPreview } from '../components/About/Leadershippreview';
+import { SafetyCultureBand } from '../components/About/Safetyculturebrand';
 import { CtaBanner } from '../components/Ctabanner';
 
 

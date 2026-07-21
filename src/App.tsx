@@ -5,6 +5,10 @@ import { Toaster } from 'sonner';
 import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/Homepage';
 import { AboutPage } from './pages/Aboutpage';
+import { ServicesPage } from './pages/Servicepage';
+import { ProjectsPage } from './pages/Projectspage';
+import { TeamPage } from './pages/Teampage';
+import { HealthSafetyPage } from './pages/Healthandsafetypage';
 
 
 const queryClient = new QueryClient({
@@ -22,7 +26,11 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'about', element: <AboutPage /> }
+      { path: 'about', element: <AboutPage /> },
+      { path: 'services', element: <ServicesPage /> },
+      { path: 'projects', element: <ProjectsPage /> },
+      { path: 'team', element: <TeamPage /> },
+      { path: 'health-safety', element: <HealthSafetyPage /> }
     ],
   },
 ]);

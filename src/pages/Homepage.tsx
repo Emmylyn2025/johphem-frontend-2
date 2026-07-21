@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-import { Hero } from '../components/Hero';
-import { WhatWeDo } from '../components/Whatwedo';
-import { StatsStrip } from '../components/Statsstrip';
-import { FeaturedProjects } from '../components/Featuredprojects';
-import { TrustSignals } from '../components/Trustsignal';
+import { Hero } from '../components/Home/Hero';
+import { WhatWeDo } from '../components/Home/Whatwedo';
+import { StatsStrip } from '../components/Home/Statsstrip';
+import { FeaturedProjects } from '../components/Home/Featuredprojects';
+import { TrustSignals } from '../components/Home/Trustsignal';
 import { CtaBanner } from '../components/Ctabanner';
 
 
