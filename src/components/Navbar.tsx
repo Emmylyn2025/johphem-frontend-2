@@ -14,20 +14,20 @@ const NAV_LINKS = [
   { label: 'Careers', to: '/careers' },
   { label: 'Contact', to: '/contact' },
 ] as const;
-
+ 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const isOpen = useMenuStore((s) => s.isOpen);
   const toggle = useMenuStore((s) => s.toggle);
   const close = useMenuStore((s) => s.close);
-
+ 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
+ 
   return (
     <header
       className={cn(
@@ -50,51 +50,54 @@ export function Navbar() {
             Associates
           </span>
         </NavLink>
-
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === '/'}
-              className={({ isActive }) =>
-                cn(
-                  'font-body text-caption uppercase tracking-wide transition-colors duration-150',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-amber',
-                  isActive
-                    ? 'text-signal-amber'
-                    : scrolled
-                      ? 'text-concrete-100 hover:text-signal-amber'
-                      : 'text-steel hover:text-ink'
-                )
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-
-        {/* CTA */}
-        <NavLink
-          to="/contact"
-          className="hidden rounded-md bg-signal-amber px-4 py-2 font-body text-sm font-medium text-ink transition-colors duration-150 hover:bg-rebar-rust hover:text-concrete-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-amber lg:inline-block"
-        >
-          Request a Quote
-        </NavLink>
-
-        {/* Mobile toggle */}
-        <button
-          type="button"
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isOpen}
-          onClick={toggle}
-          className="inline-flex items-center justify-center rounded-md p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-amber lg:hidden"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+ 
+        {/* Right-hand group: nav + CTA + mobile toggle, kept clear of the wordmark */}
+        <div className="flex items-center gap-8 lg:ml-12">
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-6 lg:flex">
+            {NAV_LINKS.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === '/'}
+                className={({ isActive }) =>
+                  cn(
+                    'font-body text-xs uppercase tracking-wide transition-colors duration-150',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-amber',
+                    isActive
+                      ? 'text-signal-amber'
+                      : scrolled
+                        ? 'text-concrete-100 hover:text-signal-amber'
+                        : 'text-steel hover:text-ink'
+                  )
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+ 
+          {/* CTA */}
+          <NavLink
+            to="/contact"
+            className="hidden rounded-md bg-signal-amber px-4 py-2 font-body text-sm font-medium text-ink transition-colors duration-150 hover:bg-rebar-rust hover:text-concrete-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-amber lg:inline-block"
+          >
+            Request a Quote
+          </NavLink>
+ 
+          {/* Mobile toggle */}
+          <button
+            type="button"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isOpen}
+            onClick={toggle}
+            className="inline-flex items-center justify-center rounded-md p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-amber lg:hidden"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
-
+ 
       {/* Mobile menu panel */}
       {isOpen && (
         <nav

@@ -1,5 +1,5 @@
 import { ShieldCheck, Ruler, Handshake, Users } from 'lucide-react';
-import { SectionHeading } from './Sectionheading';
+import { SectionHeading } from '../Sectionheading';
 
 const VALUES = [
   {

@@ -8,7 +8,7 @@ export function TeamHero() {
         </h1>
         <p className="mt-4 max-w-xl font-body text-body-lg text-steel-200">
           [Placeholder] The team behind every drawing, inspection, and
-          handover — qualified, certified, and accountable.
+          handover qualified, certified, and accountable.
         </p>
       </div>
     </section>

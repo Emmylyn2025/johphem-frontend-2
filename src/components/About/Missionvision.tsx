@@ -1,5 +1,5 @@
 import { Target, Compass } from 'lucide-react';
-import { SectionHeading } from './Sectionheading';
+import { SectionHeading } from '../Sectionheading';
 
 export function MissionVision() {
   return (

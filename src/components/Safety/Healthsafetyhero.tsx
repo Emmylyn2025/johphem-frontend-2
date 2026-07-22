@@ -9,7 +9,7 @@ export function HealthSafetyHero() {
           Zero harm isn&apos;t a slogan here.
         </h1>
         <p className="mt-4 max-w-xl font-body text-body-lg text-steel-200">
-          [Placeholder] Every site, every crew, every day — safety, quality,
+          [Placeholder] Every site, every crew, every day safety, quality,
           and environmental standards aren&apos;t separate from how we build.
           They're how we build.
         </p>
