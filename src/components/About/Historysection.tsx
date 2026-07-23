@@ -1,4 +1,4 @@
-import { SectionHeading } from './Sectionheading';
+import { SectionHeading } from '../Sectionheading';
 
 // TODO: placeholder milestones — replace with real founding year and history.
 const MILESTONES = [
@@ -16,7 +16,7 @@ export function HistorySection() {
           <SectionHeading eyebrow="Our Story" title="A history of getting it built." />
           <p className="mt-4 font-body text-body text-steel">
             [Placeholder] Johphem Associates was founded to bring engineering
-            discipline to Nigeria&apos;s construction sector — pairing
+            discipline to Nigeria&apos;s construction sector pairing
             technical rigor with accountability on every site we manage.
           </p>
         </div>

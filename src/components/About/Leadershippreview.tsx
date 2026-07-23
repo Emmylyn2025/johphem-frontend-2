@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { SectionHeading } from './Sectionheading';
+import { SectionHeading } from '../Sectionheading';
 
 export function LeadershipPreview() {
   return (
@@ -12,7 +12,7 @@ export function LeadershipPreview() {
             variant="dark"
           />
           <p className="mt-4 max-w-xl font-body text-body text-steel-200">
-            [Placeholder] Our leadership team combines decades of on-site
+            [Placeholder] Our leadership team combines decades of on site
             engineering experience with formal certification across civil and
             structural disciplines.
           </p>

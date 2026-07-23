@@ -13,7 +13,7 @@ export function SafetyCultureBand() {
             </p>
             <p className="mt-2 max-w-xl font-body text-body text-steel">
               [Placeholder] Safety culture isn&apos;t a policy document at
-              Johphem — it&apos;s the first thing reviewed on every site,
+              Johphem it&apos;s the first thing reviewed on every site,
               every day.
             </p>
           </div>

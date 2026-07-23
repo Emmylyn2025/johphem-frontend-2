@@ -9,12 +9,12 @@ const SERVICES = [
   {
     icon: Layers,
     title: 'Structural Design',
-    description: 'Load-bearing design and analysis for buildings and infrastructure.',
+    description: 'Load bearing design and analysis for buildings and infrastructure.',
   },
   {
     icon: Building2,
     title: 'Building Construction',
-    description: 'End-to-end construction management for residential and commercial builds.',
+    description: 'End to end construction management for residential and commercial builds.',
   },
   {
     icon: HardHat,
@@ -24,7 +24,7 @@ const SERVICES = [
   {
     icon: ClipboardCheck,
     title: 'Project Supervision',
-    description: 'On-site QA/QC oversight from groundbreaking to handover.',
+    description: 'On site QA/QC oversight from groundbreaking to handover.',
   },
 ] as const;
 

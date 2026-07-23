@@ -9,6 +9,8 @@ import { ServicesPage } from './pages/Servicepage';
 import { ProjectsPage } from './pages/Projectspage';
 import { TeamPage } from './pages/Teampage';
 import { HealthSafetyPage } from './pages/Healthandsafetypage';
+import { CareersPage } from './pages/Careerpage';
+import { ContactPage } from './pages/Contactpage';
 
 
 const queryClient = new QueryClient({
@@ -30,7 +32,9 @@ const router = createBrowserRouter([
       { path: 'services', element: <ServicesPage /> },
       { path: 'projects', element: <ProjectsPage /> },
       { path: 'team', element: <TeamPage /> },
-      { path: 'health-safety', element: <HealthSafetyPage /> }
+      { path: 'health-safety', element: <HealthSafetyPage /> },
+      { path: 'careers', element: <CareersPage /> },
+      { path: 'contact', element: <ContactPage /> }
     ],
   },
 ]);

@@ -25,7 +25,7 @@ export function QaQcSection() {
             </h3>
             <p className="mt-2 font-body text-body text-steel">
               [Placeholder] On-site testing, punch-list resolution before
-              milestone sign-off, and a final inspection standard that
+              milestone sign off, and a final inspection standard that
               doesn&apos;t vary by client or contract size.
             </p>
           </div>

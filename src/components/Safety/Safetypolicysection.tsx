@@ -18,7 +18,7 @@ export function SafetyPolicySection() {
           <p className="mt-4 font-body text-body text-steel">
             [Placeholder] Our safety policy governs every site we manage,
             regardless of contract size or client. It isn&apos;t a document
-            reviewed once a year — it&apos;s the first thing checked every
+            reviewed once a year it&apos;s the first thing checked every
             morning.
           </p>
         </div>

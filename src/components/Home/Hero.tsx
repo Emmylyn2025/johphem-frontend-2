@@ -13,7 +13,7 @@ export function Hero() {
         <p className="max-w-xl font-body text-body-lg text-steel-200">
           Johphem Associates delivers civil engineering, structural design, and
           construction supervision for developers and procurement teams across
-          Nigeria — from first drawing to final inspection.
+          Nigeria from first drawing to final inspection.
         </p>
         <div className="mt-4 flex flex-wrap gap-4">
           <NavLink
